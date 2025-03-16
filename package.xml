@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>rtabmap_utils</name>
   <version>0.0.0</version>
   <description>The rtabmap_utils package</description>
@@ -8,13 +9,18 @@
 
   <license>TODO</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>rplidar_ros</run_depend>
-  <run_depend>hector_mapping</run_depend>
-  <run_depend>rtabmap_ros</run_depend>
-  <run_depend>urdf</run_depend>
-
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>rtabmap_ros</depend>
+  <depend>urdf</depend>
+  <depend>rplidar_ros</depend>
+  
+  <!-- ROS2에서는 hector_mapping 대신 slam_toolbox 사용 -->
+  <depend>slam_toolbox</depend>
+  
   <export>
-
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
