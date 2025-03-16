@@ -38,7 +38,7 @@ def generate_launch_description():
     # Static Transforms between the sensors
     static_tfs_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(rtabmap_utils_dir, 'launch', 'static_tfs_kinect2_rplidar.py')
+            os.path.join(rtabmap_utils_dir, 'launch', 'static_tfs_kinect2_rplidar.launch.py')
         ),
     )
     
